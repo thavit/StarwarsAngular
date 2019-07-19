@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <span>{{ header }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-nav-list>
+    <a mat-list-item routerLink="{{ organism.url.replace('https://swapi.co/api/species/', '') }}"
+        *ngFor="let organism of species.results"><strong>{{ organism.name | uppercase }}</strong></a>
+</mat-nav-list>

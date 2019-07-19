@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <span>Stars Wars Guide</span>
+</mat-toolbar>
+
+<mat-nav-list>
+    <a mat-list-item routerLink="/{{ category.key }}" *ngFor="let category of categories | keyvalue">
+        <strong>{{ category.key | uppercase }}</strong></a>
+</mat-nav-list>

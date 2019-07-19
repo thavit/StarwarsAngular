@@ -1,0 +1,62 @@
+<mat-toolbar color="primary">
+    <span>{{ organism.name }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h2>{{ organism.name }}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/images/species/{{ id }}.jpg" alt="Picture for {{ organism.name }}" />
+    <mat-card-content>
+        <h3>Classification</h3>
+        <p>
+            {{ organism.classification | uppercase }}
+        </p>
+        <h3>Average Height</h3>
+        <p>
+            {{ organism.average_height }}
+        </p>
+        <h3>Average Lifespan</h3>
+        <p>
+            {{ organism.average_lifespan }}
+        </p>
+        <h3>Eye colours</h3>
+        <p>
+            {{ organism.eye_colors | uppercase }}
+        </p>
+        <h3>Hair colours</h3>
+        <p>
+            {{ organism.hair_colors | uppercase }}
+        </p>
+        <h3>Skin colours</h3>
+        <p>
+            {{ organism.skin_colors | uppercase }}
+        </p>
+        <h3>Language</h3>
+        <p>
+            {{ organism.language | uppercase }}
+        </p>
+        <h3>Designation</h3>
+        <p>
+            {{ organism.designation | uppercase }}
+        </p>
+        <h3>Homeworld</h3>
+        <p>
+            {{ organism.homeworld | uppercase }}
+        </p>
+        <h3>Share this with your friends</h3>
+        <share-buttons [theme]="'default'"
+            [include]="['facebook','whatsapp','line','twitter','email','linkedin','google','pinterest','reddit','tumblr','mix','vk','telegram','messenger','xing','sms','print','copy']"
+            [show]="7" [showCount]="true"></share-buttons>
+        <h3>Comment</h3>
+        <app-addcomment (addComment)="onAddComment($event)"></app-addcomment>
+        <app-listcomment [comments]="commentsList" (deleteComment)="onDeleteComment($event)"></app-listcomment>
+
+    </mat-card-content>
+</mat-card>

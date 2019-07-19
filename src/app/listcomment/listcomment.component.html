@@ -1,0 +1,5 @@
+<mat-nav-list>
+    <a mat-list-item *ngFor="let comment of comments">
+        <span>{{comment.remark}}</span> <span class="example-fill-remaining-space"></span><button mat-flat-button
+            color="warn" (click)="onDelete(comment.id)">Delete Comment</button></a>
+</mat-nav-list>

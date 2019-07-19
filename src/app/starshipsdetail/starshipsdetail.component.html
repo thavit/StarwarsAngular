@@ -1,0 +1,80 @@
+<mat-toolbar color="primary">
+    <span>{{ starship.name }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h2>{{ starship.name }}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/images/starships/{{ id }}.jpg" alt="Picture for {{ starship.name }}" />
+    <mat-card-content>
+        <h3>Model</h3>
+        <p>
+            {{ starship.model | uppercase }}
+        </p>
+        <h3>Manufacturer</h3>
+        <p>
+            {{ starship.manufacturer | uppercase }}
+        </p>
+        <h3>Cost in credits</h3>
+        <p>
+            {{ starship.cost_in_credits }}
+        </p>
+        <h3>Length</h3>
+        <p>
+            {{ starship.length }}
+        </p>
+        <h3>Max atmosphering speed</h3>
+        <p>
+            {{ starship.max_atmosphering_speed | uppercase }}
+        </p>
+        <h3>Crew</h3>
+        <p>
+            {{ starship.crew }}
+        </p>
+        <h3>Passenger</h3>
+        <p>
+            {{ starship.passengers }}
+        </p>
+        <h3>Cargo Capacity</h3>
+        <p>
+            {{ starship.cargo_capacity }}
+        </p>
+        <h3>Comsumables</h3>
+        <p>
+            {{ starship.consumables | uppercase }}
+        </p>
+        <h3>Hyperdrive rating</h3>
+        <p>
+            {{ starship.hyperdrive_rating }}
+        </p>
+        <h3>MGLT</h3>
+        <p>
+            {{ starship.MGLT }}
+        </p>
+        <h3>Starship class</h3>
+        <p>
+            {{ starship.starship_class | uppercase }}
+        </p>
+        <div *ngIf="starship.pilots.length > 0">
+            <h3>Pilots</h3>
+            <p>
+                {{ starship.pilots }}
+            </p>
+        </div>
+        <h3>Share this with your friends</h3>
+        <share-buttons [theme]="'default'"
+            [include]="['facebook','whatsapp','line','twitter','email','linkedin','google','pinterest','reddit','tumblr','mix','vk','telegram','messenger','xing','sms','print','copy']"
+            [show]="7" [showCount]="true"></share-buttons>
+        <h3>Comment</h3>
+        <app-addcomment (addComment)="onAddComment($event)"></app-addcomment>
+        <app-listcomment [comments]="commentsList" (deleteComment)="onDeleteComment($event)"></app-listcomment>
+
+    </mat-card-content>
+</mat-card>

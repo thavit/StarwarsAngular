@@ -1,0 +1,43 @@
+<mat-toolbar color="primary">
+    <span>{{ film.title }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-card>
+    <mat-card-header>
+        <mat-card-subtitle>Episode {{ film.episode_id }} </mat-card-subtitle>
+        <mat-card-title>
+            <h2>{{ film.title }}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/images/films/{{ id }}.jpg" alt="Poster for {{ film.title }}" />
+    <mat-card-content>
+        <h3>Released Date</h3>
+        <p>
+            {{ film.release_date }}
+        </p>
+        <h3>Opening Crawl</h3>
+        <p>
+            {{ film.opening_crawl }}
+        </p>
+        <h3>Directed By</h3>
+        <p>
+            {{ film.director }}
+        </p>
+        <h3>Producers</h3>
+        <p>
+            {{ film.producer }}
+        </p>
+        <h3>Share this with your friends</h3>
+        <share-buttons [theme]="'default'"
+            [include]="['facebook','whatsapp','line','twitter','email','linkedin','google','pinterest','reddit','tumblr','mix','vk','telegram','messenger','xing','sms','print','copy']"
+            [show]="7" [showCount]="true"></share-buttons>
+        <h3>Comment</h3>
+        <app-addcomment (addComment)="onAddComment($event)"></app-addcomment>
+        <app-listcomment [comments]="commentsList" (deleteComment)="onDeleteComment($event)"></app-listcomment>
+
+    </mat-card-content>
+</mat-card>

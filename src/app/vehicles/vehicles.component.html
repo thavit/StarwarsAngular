@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <span>{{ header }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-nav-list>
+    <a mat-list-item routerLink="/vehicles/{{
+        vehicle.url.replace('https://swapi.co/api/vehicles/', '')
+      }}" *ngFor="let vehicle of vehicles.results"><strong>{{ vehicle.name | uppercase }}</strong></a>
+</mat-nav-list>

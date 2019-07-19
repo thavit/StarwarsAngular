@@ -1,0 +1,58 @@
+<mat-toolbar color="primary">
+    <span>{{ planet.name }}</span>
+
+    <!-- This fills the remaining space of the current row -->
+    <span class="example-fill-remaining-space"></span>
+
+    <back-button color="white"></back-button>
+</mat-toolbar>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+            <h2>{{ planet.name }}</h2>
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/images/planets/{{ id }}.jpg" alt="Picture for {{ planet.name }}" />
+    <mat-card-content>
+        <h3>Population</h3>
+        <p>
+            {{ planet.population }}
+        </p>
+        <h3>Terrain</h3>
+        <p>
+            {{ planet.terrain }}
+        </p>
+        <h3>Surface water</h3>
+        <p>
+            {{ planet.surface_water }}
+        </p>
+        <h3>Climate</h3>
+        <p>
+            {{ planet.climate }}
+        </p>
+        <h3>Gravity</h3>
+        <p>
+            {{ planet.gravity }}
+        </p>
+        <h3>Diameter</h3>
+        <p>
+            {{ planet.diameter }}
+        </p>
+        <h3>Orbital period</h3>
+        <p>
+            {{ planet.orbital_period }}
+        </p>
+        <h3>Rotation period</h3>
+        <p>
+            {{ planet.rotation_period }}
+        </p>
+        <h3>Share this with your friends</h3>
+        <share-buttons [theme]="'default'"
+            [include]="['facebook','whatsapp','line','twitter','email','linkedin','google','pinterest','reddit','tumblr','mix','vk','telegram','messenger','xing','sms','print','copy']"
+            [show]="7" [showCount]="true"></share-buttons>
+        <h3>Comment</h3>
+        <app-addcomment (addComment)="onAddComment($event)"></app-addcomment>
+        <app-listcomment [comments]="commentsList" (deleteComment)="onDeleteComment($event)"></app-listcomment>
+
+    </mat-card-content>
+</mat-card>
