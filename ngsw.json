@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1563522785010,
+  "timestamp": 1563523537943,
   "index": "https://Thavit.github.io/StarwarsAngular/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://Thavit.github.io/StarwarsAngular/favicon.ico",
         "https://Thavit.github.io/StarwarsAngular/index.html",
-        "https://Thavit.github.io/StarwarsAngular/main-es2015.e07b272f2da8a778091b.js",
-        "https://Thavit.github.io/StarwarsAngular/main-es5.925713578f8f0d8459c5.js",
+        "https://Thavit.github.io/StarwarsAngular/main-es2015.9f2eba199d590182463a.js",
+        "https://Thavit.github.io/StarwarsAngular/main-es5.ed46be44df5871b6965e.js",
         "https://Thavit.github.io/StarwarsAngular/polyfills-es2015.4d31cca2afc45cfd85b5.js",
         "https://Thavit.github.io/StarwarsAngular/polyfills-es5.2219c87348e60efc0076.js",
         "https://Thavit.github.io/StarwarsAngular/runtime-es2015.703a23e48ad83c851e49.js",
@@ -462,9 +462,9 @@
     "https://Thavit.github.io/StarwarsAngular/assets/images/vehicles/7.jpg": "335a99b44b41e35e058ab09c0ba0536bf6c2189a",
     "https://Thavit.github.io/StarwarsAngular/assets/images/vehicles/8.jpg": "5cc673acd400466a543dad2289720e02152a24ea",
     "https://Thavit.github.io/StarwarsAngular/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "https://Thavit.github.io/StarwarsAngular/index.html": "1e77ca3f96fd06992f6ca483a7f77eb231e029c2",
-    "https://Thavit.github.io/StarwarsAngular/main-es2015.e07b272f2da8a778091b.js": "4bed9f5456f62678434b93e1081a41ca055f57ca",
-    "https://Thavit.github.io/StarwarsAngular/main-es5.925713578f8f0d8459c5.js": "ea4cd152e05e21be1f26216dd808bd878b28a51a",
+    "https://Thavit.github.io/StarwarsAngular/index.html": "df1fd16e80d1c179f834bfa27b7ca2f96ec16987",
+    "https://Thavit.github.io/StarwarsAngular/main-es2015.9f2eba199d590182463a.js": "15017b17876dc156bfd46bf776d3a6333bc74744",
+    "https://Thavit.github.io/StarwarsAngular/main-es5.ed46be44df5871b6965e.js": "9954d4c7d0283e334908ac72b81bfac6edb3d14d",
     "https://Thavit.github.io/StarwarsAngular/polyfills-es2015.4d31cca2afc45cfd85b5.js": "058203dab4ba87056d6976029ba60fa42e6f75b9",
     "https://Thavit.github.io/StarwarsAngular/polyfills-es5.2219c87348e60efc0076.js": "6c9688c6586bfcf669879655ba5874ef1d2b4bcf",
     "https://Thavit.github.io/StarwarsAngular/runtime-es2015.703a23e48ad83c851e49.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
